@@ -6,6 +6,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import LoginPage from './components/LoginPage';
 import AnalysisPage from './components/AnalysisPage';
+import LaboratoriesPage from './components/LaboratoriesPage';
 axios.defaults.baseURL = 'http://localhost:8000/api'
 function App() {
   const [user, setUser] = useState(undefined);
@@ -35,6 +36,7 @@ function App() {
       />
       <Routes>
         <Route path='/analysis' element={<AnalysisPage />} />
+        <Route path='/' element={<LaboratoriesPage />} />
       </Routes>
     </BrowserRouter>
   )
