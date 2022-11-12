@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
 import LoginPage from './components/LoginPage';
+import AnalysisPage from './components/AnalysisPage';
 axios.defaults.baseURL = 'http://localhost:8000/api'
 function App() {
   const [user, setUser] = useState(undefined);
@@ -32,7 +33,9 @@ function App() {
           axios.defaults.headers.common.authorization = ''
         }}
       />
-
+      <Routes>
+        <Route path='/analysis' element={<AnalysisPage />} />
+      </Routes>
     </BrowserRouter>
   )
 }
