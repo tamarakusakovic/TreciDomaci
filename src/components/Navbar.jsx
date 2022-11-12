@@ -9,7 +9,7 @@ export default function Navbar({ user, onLogout }) {
                     user ? (user.name) : 'Pharmacy'
                 }
             </div>
-            <div className="navbar-collapse collapse">
+            <div className="navbar-collapse collapse pr-3`">
                 <ul className="navbar-nav mx-auto">
                     <li className="nav-item mx-auto">
                         <NavLink className='nav-link' to='/'>{user ? 'Laboratories' : 'Login'}</NavLink>
@@ -24,7 +24,7 @@ export default function Navbar({ user, onLogout }) {
                 </ul>
                 {
                     user && (
-                        <button className='btn btn-secondary mr-3'>Logout</button>
+                        <button onClick={onLogout} className='btn btn-light mr-3'>Logout</button>
                     )
                 }
             </div>
